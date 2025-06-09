@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h1 class="mt-4 mb-4">Cafes List</h1>
+<div class="row">
+  {% for cafe in cafes %}
+  <div class="col-md-6 mb-4">
+    <div class="card">
+      <img src="{{ cafe.img_url }}" class="card-img-top" alt="{{ cafe.name }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ cafe.name }}</h5>
+        <p class="card-text">{{ cafe.location }} | ☕ {{ cafe.coffee_price }}</p>
+        <a href="{{ cafe.map_url }}" target="_blank" class="btn btn-sm btn-primary">Map</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<a href="/add" class="btn btn-success mt-4">Add New Café</a>
+{% endblock %}

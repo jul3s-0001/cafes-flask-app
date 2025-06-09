@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h2 class="mt-4 mb-4">Add a New Café</h2>
+<form method="POST">
+  <input class="form-control mb-2" name="name" placeholder="Cafe Name" required>
+  <input class="form-control mb-2" name="map_url" placeholder="Google Maps URL" required>
+  <input class="form-control mb-2" name="img_url" placeholder="Image URL" required>
+  <input class="form-control mb-2" name="location" placeholder="Location" required>
+  <input class="form-control mb-2" name="seats" placeholder="Seating (e.g. 0-10)" required>
+  <input class="form-control mb-2" name="coffee_price" placeholder="Coffee Price (e.g. £2.50)" required>
+  <div class="form-check"><input class="form-check-input" type="checkbox" name="has_sockets" id="sockets"><label class="form-check-label" for="sockets">Sockets</label></div>
+  <div class="form-check"><input class="form-check-input" type="checkbox" name="has_toilet" id="toilet"><label class="form-check-label" for="toilet">Toilet</label></div>
+  <div class="form-check"><input class="form-check-input" type="checkbox" name="has_wifi" id="wifi"><label class="form-check-label" for="wifi">Wi-Fi</label></div>
+  <div class="form-check"><input class="form-check-input" type="checkbox" name="can_take_calls" id="calls"><label class="form-check-label" for="calls">Can take calls</label></div>
+  <button class="btn btn-primary mt-3">Submit</button>
+</form>
+{% endblock %}
